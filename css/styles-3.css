@@ -34,10 +34,9 @@ header {
     display: none;
 }
 nav ul {
-    width: 50%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: -20px auto 40px;
 }
 nav ul li {
@@ -72,15 +71,81 @@ nav ul li:hover {
     font-size: 2rem;
     font-weight: 700;
 }
-.events, .about, .contact {
+.main {
     width: 80%;
-    height: 400px;
+    min-height: 400px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 100px 20px 20px;
     text-align: center;
 }
+.schedule, .rules {
+    padding: 40px;
+    margin-bottom: 50px;
+}
 .events > *, .about > *, .contact > * {
     margin-bottom: 20px;
-    
+}
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px auto;
+}
+.schedule table tr {
+    border-bottom: 1px solid #000;
+}
+.schedule table tr:last-child {
+    border-bottom: none;
+}
+.schedule table tr td {
+    padding: 10px 0;
+}
+.schedule .alt-title, .rules .alt-title {
+    position: static;
+    transform: unset;
+}
+.extra-info {
+    text-align: left;
+}
+.extra-info p:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.rules > div {
+    text-align: left;
+    margin: 30px 0;
+}
+.rules h4 {
+    margin-bottom: 10px;
+}
+.rules p {
+    text-indent: 20px;
+}
+.rules ul, .rules ol {
+    margin: 0 20px;
+}
+
+/*Navbar & Header Responsive*/
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .logo, .alt-logo {
+        width: 100px;
+    }
+    nav ul {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        margin: 2px 0;
+        width: fit-content;
+        font-size: 0.8rem;
+        min-width: 150px;
+        padding: 10px;
+        text-align: center;
+    }
 }
