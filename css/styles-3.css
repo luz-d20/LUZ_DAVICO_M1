@@ -62,21 +62,18 @@ nav ul li:hover {
     position: relative;
 }
 .alt-title {
-    position: absolute;
-    top: 27%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
     color: #000;
     font-size: 2rem;
     font-weight: 700;
+    padding: 20px 0;
 }
 .main {
     width: 80%;
     min-height: 400px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 100px 20px 20px;
+    padding: 40px 20px 20px;
     text-align: center;
 }
 .schedule, .rules {
@@ -125,8 +122,128 @@ nav ul li:hover {
 .rules ul, .rules ol {
     margin: 0 20px;
 }
+.rules dt {
+    font-weight: 700;
+}
+.rules dd {
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+/*About page photo gallery*/
+.photo-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.photo-grid img {
+    width: 30%;
+    margin: 20px 0;
+    border:white 2px solid;
+    border-radius: 10px;
+}
 
-/*Navbar & Header Responsive*/
+
+/*Maps & Iframes*/
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+.container h2 {
+    color: #fff;
+}
+.cards {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card iframe {
+    max-width: 90%;
+    height: auto;
+    margin: 20px 0;
+}
+.card {
+    width: 30%;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px 5px;
+    text-align: center;
+    border-radius: 15px;
+}
+.card > * {
+    margin-bottom: 20px;
+}
+/*Registration*/
+.reg-form {
+    padding: 40px 20px;
+    text-align: left;
+}
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+.personal-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.personal-info > * {
+    width:50%;
+    margin: 0 0 20px;
+}
+.fullwidth, .grade {width:100%;}
+fieldset {
+    border: none;
+    margin: 20px 0;
+    padding: 10px;
+}
+legend {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+input[type="text"], input[type="date"] {
+    width: calc(100% - 30px);
+    padding: 10px;
+    border: none;
+}
+form span {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="radio"], input[type="checkbox"] {
+    margin-left: 20px;
+}
+input[type="submit"] {
+    background-color: yellow;
+    min-width: 25%;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border-left: none;
+    border-top: none;
+    border-right: 2px solid red;
+    border-bottom: 2px solid red;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+}
+.checkboxes h4, .checkboxes legend {
+    width: 100%;
+}
+.checkboxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.checkboxes label {
+    min-width: 50%;
+    text-align: left;
+}
+
+/*Responsive + MQ*/
 @media screen and (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -148,43 +265,54 @@ nav ul li:hover {
         padding: 10px;
         text-align: center;
     }
+    .photo-grid {
+        flex-direction: column;
+    }
+    .photo-grid img {
+        width: 100%;
+    }
+    table {
+        font-size: smaller;
+    }
+    .schedule {
+        padding: 5px;
+    }
+    .schedule table {
+        margin: 0;
+    }
+    .extra-info p:last-child {
+        flex-direction: column;
+    }
+    .cards {
+        flex-direction: column;
+    }
+    .card {
+        width: 100%;
+    }
+    .card iframe {
+        max-width: 90%;
+    }
+    .game-info .container:last-child, .registration .main {
+        margin: 0;
+        width: 100%;
+    }
+    form {
+        width: 100%;
+    }
+    form label {
+        width: 100%;
+        display: block;
+    }
+    .personal-info {
+        flex-direction: column;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
 }
-
-/*Maps & Iframes*/
-.container {
-    width: 80%;
-    margin: 20px auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    text-align: center;
+@media screen and (max-width: 1200px) {
+    .personal-info > * {
+        width: 100%;
+    }
+    
 }
-.container h2 {
-    color: #fff;
-}
-.cards {
-    width: 100%; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.maps iframe {
-    width: 100%;
-    margin: 20px 0;
-}
-.card {
-    width: 30%;
-    margin: 20px 0;
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 15px;
-}
-.card > * {
-    margin-bottom: 20px;
-}
-/*Registration*/
-.reg-form {
-    padding: 40px 20px;
-}
-
