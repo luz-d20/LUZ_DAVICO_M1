@@ -149,3 +149,42 @@ nav ul li:hover {
         text-align: center;
     }
 }
+
+/*Maps & Iframes*/
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+.container h2 {
+    color: #fff;
+}
+.cards {
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.maps iframe {
+    width: 100%;
+    margin: 20px 0;
+}
+.card {
+    width: 30%;
+    margin: 20px 0;
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+.card > * {
+    margin-bottom: 20px;
+}
+/*Registration*/
+.reg-form {
+    padding: 40px 20px;
+}
+
